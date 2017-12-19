@@ -1,0 +1,35 @@
+{
+  "name": "mypu",
+  "version": "1.0.0",
+  "description": "mypu",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "start-dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "connect-timeout": "^1.8.0",
+    "express": "^4.13.4",
+    "generic-pool": "^2.4.2",
+    "http": "0.0.0",
+    "image-downloader": "^3.2.2",
+    "log4js": "^1.1.1",
+    "multer": "^1.2.0",
+    "mysql": "^2.10.2",
+    "requestify": "^0.2.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
