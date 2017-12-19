@@ -5,6 +5,7 @@ var express = require('express');
 var app = express();
 var timeout = require('connect-timeout');
 var bodyParser = require('body-parser');
+var nodeEnvFile = require("node-env-file");
 
 app.use(timeout('120000')); // request-timeout
 
@@ -15,8 +16,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // that will include all the other web services
 require('./api/services')(app);
 
-var port = process.env.PORT || 8080;
+nodeEnvFile(".env");
 // create server
-var server = app.listen(port, function () {
-    console.log("App listening on : " + port);
+var server = app.listen(process.env.PORT, function () {
+    console.log("App listening on : " + process.env.PORT);
 });

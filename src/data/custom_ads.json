@@ -1,0 +1,14 @@
+{
+    "customAds": [
+        {
+            "id": 1,
+            "startDate": "2017-12-01",
+            "endDate": "2017-12-31"
+        },
+        {
+            "id": 2,
+            "startDate": "",
+            "endDate": ""
+        }
+    ]
+}
