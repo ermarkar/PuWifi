@@ -1,14 +1,26 @@
 {
-    "customAds": [
+    "minAds": [
         {
-            "id": 1,
+            "id": "1",
             "startDate": "2017-12-01",
             "endDate": "2017-12-31"
         },
         {
-            "id": 2,
-            "startDate": "",
-            "endDate": ""
+            "id": "2",
+            "startDate": "2017-12-01",
+            "endDate": "2017-12-18"
+        }
+    ],
+    "fullAds": [
+        {
+            "id": "1",
+            "startDate": "2017-12-01",
+            "endDate": "2017-12-31"
+        },
+        {
+            "id": "2",
+            "startDate": "2017-12-01",
+            "endDate": "2017-12-31"
         }
     ]
 }

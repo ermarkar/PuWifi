@@ -1,7 +1,19 @@
 var path = require("path");
+var _ = require("underscore");
+
 module.exports = function (router) {
-    var customAds = require("../data/custom_ads.json");
+
     router.get("/customads", (req, res) => {
+        var customAds = require("../data/custom_ads.json");
+        var validMinAds = _.filter(customAds.minAds, (minAd) => {
+            return new Date(minAd.endDate) > new Date();
+        });
+
+        var validFullAds = _.filter(customAds.fullAds, (fullAd) => {
+            return new Date(fullAd.endDate) > new Date();
+        });
+
+        var customAds = { minAds: validMinAds, fullAds: validFullAds };
         res.json(customAds);
     });
 
