@@ -17,9 +17,9 @@ module.exports = function (router) {
         res.json(customAds);
     });
 
-    router.get("/getad/:size/:id", (req, res) => {
+    router.get("/getad/:size/:device/:id", (req, res) => {
         res.sendFile(path.join(__dirname, "..", "..", process.env.STORAGE_IMAGE,
-            ((req.params.id + "_banner_" + req.params.size + ".jpg"))));
+            ((req.params.id + "_banner_" + req.params.size + "_" + req.params.device + ".jpg"))));
     });
 
     return router;
