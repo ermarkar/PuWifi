@@ -3,7 +3,7 @@ var _ = require("underscore");
 
 module.exports = function (router) {
     var customAds = require("../data/custom_ads.json");
-    
+
     /**
      * To get the list of available and active custom ads
      */
@@ -37,21 +37,27 @@ module.exports = function (router) {
         // get the valid ads based on size
         if (req.params.size === "full") {
             validAds = _.filter(customAds.fullAds, (fullAd) => {
-                return new Date(fullAd.endDate) > new Date();
+                return new Date(fullAd.endDate) >= new Date();
             });
         } else {
             validAds = _.filter(customAds.minAds, (minAd) => {
-                return new Date(minAd.endDate) > new Date();
+                return new Date(minAd.endDate) >= new Date();
             });
         }
-        // extract the array of valid ids
-        var adIds = _.pluck(validAds, "id");
-        var randomAdId = adIds[Math.floor(Math.random() * adIds.length)];
 
-        var filePath = path.join(__dirname, "..", "..", process.env.STORAGE_IMAGE,
-            ((randomAdId + "_banner_" + req.params.size + "_" + req.params.device + ".jpg")));
+        if (validAds.length > 0) {
+            // extract the array of valid ids
+            var adIds = _.pluck(validAds, "id");
+            var randomAdId = adIds[Math.floor(Math.random() * adIds.length)];
 
-        res.sendFile(filePath);
+            var filePath = path.join(__dirname, "..", "..", process.env.STORAGE_IMAGE,
+                ((randomAdId + "_banner_" + req.params.size + "_" + req.params.device + ".jpg")));
+
+            res.sendFile(filePath);
+        } else {
+            res.json({ message: "No Data found." })
+        }
+
     });
 
     return router;
