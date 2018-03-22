@@ -13,6 +13,9 @@ app.use(timeout('120000')); // request-timeout
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// static files
+app.use(express.static('public'));
+
 // that will include all the other web services
 require('./api/services')(app);
 
