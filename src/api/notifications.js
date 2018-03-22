@@ -13,15 +13,16 @@ module.exports = function (router) {
     /**
      * To get the notifications
      */
-    router.get("/getnotifications/:searchText/:pageNo/:count", (req, res) => {
-        var query = "select * from get_notifications('" + req.params.searchText + "'," + req.params.pageNo + "," + req.params.count + ");";
+    router.get("/getnotifications", (req, res) => {
+        var query = "select * from get_notifications('" + req.query.searchText + "'," + req.query.pageNo + "," + req.query.count + ");";
 
         db.query(query, (err, result) => {
             if (err) {
                 res.status(400).send(err);
+            } else {
+                res.send(result);
             }
-            res.send(result);
-        })
+        });
     });
 
     return router;

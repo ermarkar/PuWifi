@@ -12,7 +12,7 @@ var config = {
     database: process.env.DB,
     password: process.env.DB_PASSWORD,
     port: process.env.DB_PORT,
-    max: 10, // max number of connection can be open to database
+    max: 5, // max number of connection can be open to database
     idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
     ssl: true
 };
@@ -22,17 +22,10 @@ var pool = new Pool(config);
 module.exports = {
     query: (query, callback) => {
         console.log(query);
-        pool.connect().then(client => {
-            return client.query()
-                .then((result) => {
-                    client.release();
-                    console.log(result.rows)
-                    callback(null, result.rows[0]);
-                })
-                .catch(err => {
-                    client.release();
-                    callback(err, null);
-                });
+        pool.query(query).then(response => {
+            callback(null, response.rows);
+        }).catch(err => {
+            callback(err, null);
         })
     }
 }
