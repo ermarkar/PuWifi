@@ -14,13 +14,17 @@ module.exports = function (router) {
      * To get the notifications
      */
     router.get("/getnotifications", (req, res) => {
-        var query = "select * from get_notifications('" + req.query.searchText + "'," + req.query.pageNo + "," + req.query.count + ");";
+        var searchText = req.query.searchText || "";
+        var pageNo = req.query.pageNo || 1;
+        var count = req.query.count || 5;
+        var query = "select * from get_notifications('" + searchText + "'," + pageNo + "," + count + ");";
 
         db.query(query, (err, result) => {
             if (err) {
                 res.status(400).send(err);
             } else {
-                res.send(result);
+                var totalNotifications = 17;
+                res.send({ dataCount: totalNotifications, data: result });
             }
         });
     });
