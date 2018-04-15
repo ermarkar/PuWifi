@@ -24,11 +24,8 @@ module.exports = function (router) {
                 res.status(400).send(err);
             } else {
                 var totalNotifications = 0;
-                console.log(result[0].notifications[0].total);
-                if(result[0].notifications.length){
-                    totalNotifications = result[0].notifications[0].total;
-                }
-                return res.send({ dataCount: totalNotifications, data: result[0].notifications });
+                // console.log(result[0].notifications[0].total);
+                return res.send( result[0].notifications);
             }
         });
     });
