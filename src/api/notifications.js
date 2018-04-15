@@ -13,7 +13,7 @@ module.exports = function (router) {
     /**
      * To get the notifications
      */
-    router.get("/getnotifications", (req, res) => {
+    router.get("/notifications", (req, res) => {
         var searchText = req.query.searchText || "";
         var pageNo = req.query.pageNo || 1;
         var count = req.query.count || 5;
@@ -24,7 +24,7 @@ module.exports = function (router) {
                 res.status(400).send(err);
             } else {
                 var totalNotifications = 17;
-                res.send({ dataCount: totalNotifications, data: result });
+                res.send( result);
             }
         });
     });
