@@ -23,8 +23,12 @@ module.exports = function (router) {
             if (err) {
                 res.status(400).send(err);
             } else {
-                var totalNotifications = 17;
-                res.send({ dataCount: totalNotifications, data: result[0].notifications });
+                var totalNotifications = 0;
+                console.log(result[0].notifications[0].total);
+                if(result[0].notifications.length){
+                    totalNotifications = result[0].notifications[0].total;
+                }
+                return res.send({ dataCount: totalNotifications, data: result[0].notifications });
             }
         });
     });
