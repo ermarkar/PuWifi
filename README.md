@@ -4,4 +4,6 @@ To start in development mode
 Authentication Process
     always send token in header as token field   
 
+Home Page 
+    http://pu-wifi.herokuapp.com
 
