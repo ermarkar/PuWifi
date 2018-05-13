@@ -1,14 +1,16 @@
 var path = require("path");
 const db = require("../db/db-connect");
+require("../common/scripts/script");
+const request = require('superagent');
 
 module.exports = function (router) {
     /**
      * Server the ad based on device, size and id
      */
-    router.get("/getlatest", (req, res) => {
-        var filePath = path.join(__dirname, "..", "..", process.env.STORAGE_NOTIFICATION_IMAGE, "notification.gif");
-        res.sendFile(filePath);
-    });
+    // router.get("/getlatest", (req, res) => {
+    //     var filePath = path.join(__dirname, "..", "..", process.env.STORAGE_NOTIFICATION_IMAGE, "notification.gif");
+    //     res.sendFile(filePath);
+    // });
 
     /**
      * To get the notifications
@@ -25,7 +27,51 @@ module.exports = function (router) {
             } else {
                 var totalNotifications = 0;
                 // console.log(result[0].notifications[0].total);
-                return res.send( result[0].notifications);
+                return res.send(result[0].notifications);
+            }
+        });
+    });
+
+    /**
+     * To add notification to database and send to firebase server
+     */
+    router.get("/addnotification", (req, res) => {
+        var title = req.query.title.replaceAll("'", "''");
+        var description = req.query.description.replaceAll("'", "''");
+        var imgUrl = req.query.imgUrl;
+        var link = req.query.link;
+        var startDate = req.query.startDate;
+        var endDate = req.query.endDate;
+
+        var query = "select * from add_notification('" + title + "','" + description + "','" + imgUrl
+            + "','" + link
+            + "','" + startDate
+            + "','" + endDate
+            + "') as result;";
+
+        db.query(query, (err, result) => {
+            if (err) {
+                res.status(400).send(err);
+            } else {
+                // after adding to the database send notification to devices using firebase
+                var notificationData = {
+                    "title": title,
+                    "body": description,
+                    "sound": "default"
+                }
+                request
+                    .post(process.env.FIREBASE_URL)
+                    .send({ to: "/topics/puwifi", priority: "high", notification: notificationData })
+                    .set("Content-Type", "application/json")
+                    .set("Authorization", process.env.FIREBASE_KEY)
+                    .end((err, res) => {
+                        if (err) {
+                            console.log(err);
+                        } else {
+                            console.log("Notification sent!!");
+                        }
+                    });
+                return res.send(result[0].result);
             }
         });
     });
