@@ -1,63 +1,55 @@
 var path = require("path");
-var _ = require("underscore");
+const db = require("../db/db-connect");
 
 module.exports = function (router) {
-    var customAds = require("../data/custom_ads.json");
+    // var customAds = require("../data/custom_ads.json");
 
     /**
      * To get the list of available and active custom ads
      */
-    router.get("/customads", (req, res) => {
-        var validMinAds = _.filter(customAds.minAds, (minAd) => {
-            return new Date(minAd.endDate) > new Date();
-        });
+    // router.get("/customads", (req, res) => {
+    //     var validMinAds = _.filter(customAds.minAds, (minAd) => {
+    //         return new Date(minAd.endDate) > new Date();
+    //     });
 
-        var validFullAds = _.filter(customAds.fullAds, (fullAd) => {
-            return new Date(fullAd.endDate) > new Date();
-        });
+    //     var validFullAds = _.filter(customAds.fullAds, (fullAd) => {
+    //         return new Date(fullAd.endDate) > new Date();
+    //     });
 
-        var customAds = { minAds: validMinAds, fullAds: validFullAds };
-        res.json(customAds);
-    });
-
-    /**
-     * Server the ad based on device, size and id
-     */
-    router.get("/getad/:size/:device/:id", (req, res) => {
-        var filePath = path.join(__dirname, "..", "..", process.env.STORAGE_IMAGE,
-            ((req.params.id + "_banner_" + req.params.size + "_" + req.params.device + ".jpg")));
-        res.sendFile(filePath);
-    });
+    //     var customAds = { minAds: validMinAds, fullAds: validFullAds };
+    //     res.json(customAds);
+    // });
 
     /**
-     * To serve the random ad by getting the random ad id from active ads, but requires device and size
+     * Serve the ad banner
      */
-    router.get("/randomad/:size/:device", (req, res) => {
-        var validAds = {};
-        // get the valid ads based on size
-        if (req.params.size === "full") {
-            validAds = _.filter(customAds.fullAds, (fullAd) => {
-                return new Date(fullAd.endDate) >= new Date();
-            });
-        } else {
-            validAds = _.filter(customAds.minAds, (minAd) => {
-                return new Date(minAd.endDate) >= new Date();
-            });
-        }
+    // router.get("/getadimage", (req, res) => {
+    //     var filePath = path.join(__dirname, "..", "..", process.env.STORAGE_IMAGE, req.query.name);
+    //     console.log(filePath);
+    //     res.sendFile(filePath);
+    // });
 
-        if (validAds.length > 0) {
-            // extract the array of valid ids
-            var adIds = _.pluck(validAds, "id");
-            var randomAdId = adIds[Math.floor(Math.random() * adIds.length)];
+    /**
+     * To serve the random ad 
+     */
+    router.get("/randomad", (req, res) => {
+        var query = "select * from get_custom_ads() as customAds;";
+        db.query(query, (err, result) => {
+            if (err) {
+                res.status(400).send(err);
+            } else {
+                // get the valid ads based on size
+                var ads = result[0].customads;
 
-            var filePath = path.join(__dirname, "..", "..", process.env.STORAGE_IMAGE,
-                ((randomAdId + "_banner_" + req.params.size + "_" + req.params.device + ".jpg")));
-
-            res.sendFile(filePath);
-        } else {
-            res.json({ message: "No Data found." })
-        }
-
+                if (ads.length > 0) {
+                    // extract the array of valid ids
+                    var randomAd = ads[Math.floor(Math.random() * ads.length)];
+                    res.send(randomAd);
+                } else {
+                    res.json({ message: "No Data found." })
+                }
+            }
+        });
     });
 
     return router;
