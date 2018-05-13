@@ -57,7 +57,8 @@ module.exports = function (router) {
                 var notificationData = {
                     "title": title,
                     "body": description,
-                    "sound": "default"
+                    "sound": "default",
+                    "click_action":"puwifi_notification"
                 }
                 request
                     .post(process.env.FIREBASE_URL)
