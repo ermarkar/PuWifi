@@ -35,13 +35,13 @@ module.exports = function (router) {
     /**
      * To add notification to database and send to firebase server
      */
-    router.get("/addnotification", (req, res) => {
-        var title = req.query.title.replaceAll("'", "''");
-        var description = req.query.description.replaceAll("'", "''");
-        var imgUrl = req.query.imgUrl;
-        var link = req.query.link;
-        var startDate = req.query.startDate;
-        var endDate = req.query.endDate;
+    router.post("/addnotification", (req, res) => {
+        var title = req.body.title.replaceAll("'", "''");
+        var description = req.body.description.replaceAll("'", "''");
+        var imgUrl = req.body.imgUrl;
+        var link = req.body.link;
+        var startDate = req.body.startDate;
+        var endDate = req.body.endDate;
 
         var query = "select * from add_notification('" + title + "','" + description + "','" + imgUrl
             + "','" + link
