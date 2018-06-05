@@ -2,8 +2,9 @@ var path = require("path");
 const db = require("../db/db-connect");
 require("../common/scripts/script");
 const request = require('superagent');
-
+TOKEN = "99999";
 module.exports = function (router) {
+
     /**
      * Server the ad based on device, size and id
      */
@@ -43,9 +44,15 @@ module.exports = function (router) {
         var startDate = req.body.startDate;
         var endDate = req.body.endDate;
 
-if(!title || !startDate){
-    return res.send({"error" :"Title or Start date is missing"});
-}
+        var token = req.body.token;
+
+        if(token !== TOKEN){
+            return res.send({ "error": "Invalid token." });
+        }
+
+        if (!title || !startDate) {
+            return res.send({ "error": "Title or Start date is missing" });
+        }
 
         var query = "select * from add_notification('" + title + "','" + description + "','" + imgUrl
             + "','" + link
@@ -62,7 +69,7 @@ if(!title || !startDate){
                     "title": title,
                     "body": description,
                     "sound": "default",
-                    "click_action":"puwifi_notification"
+                    "click_action": "puwifi_notification"
                 }
                 request
                     .post(process.env.FIREBASE_URL)

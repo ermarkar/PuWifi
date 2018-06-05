@@ -16,7 +16,7 @@
   "bugs": {
     "url": ""
   },
-  "homepage": "",
+  "homepage": "http://pu-wifi.herokuapp.com/",
   "dependencies": {
     "body-parser": "^1.15.0",
     "connect-timeout": "^1.8.0",
