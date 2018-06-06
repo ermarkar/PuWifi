@@ -1,33 +1,25 @@
-var path = require("path");
 const db = require("../db/db-connect");
 
 module.exports = function (router) {
-    // var customAds = require("../data/custom_ads.json");
-
     /**
      * To get the list of available and active custom ads
      */
-    // router.get("/customads", (req, res) => {
-    //     var validMinAds = _.filter(customAds.minAds, (minAd) => {
-    //         return new Date(minAd.endDate) > new Date();
-    //     });
+    router.get("/customads", (req, res) => {
+        var query = "select * from get_custom_ads() as customAds;";
+        db.query(query, (err, result) => {
+            if (err) {
+                res.status(400).send(err);
+            } else {
+                var ads = result[0].customads;
 
-    //     var validFullAds = _.filter(customAds.fullAds, (fullAd) => {
-    //         return new Date(fullAd.endDate) > new Date();
-    //     });
-
-    //     var customAds = { minAds: validMinAds, fullAds: validFullAds };
-    //     res.json(customAds);
-    // });
-
-    /**
-     * Serve the ad banner
-     */
-    // router.get("/getadimage", (req, res) => {
-    //     var filePath = path.join(__dirname, "..", "..", process.env.STORAGE_IMAGE, req.query.name);
-    //     console.log(filePath);
-    //     res.sendFile(filePath);
-    // });
+                if (ads.length > 0) {
+                    res.send({ data: ads });
+                } else {
+                    res.json({ message: "No Data found." })
+                }
+            }
+        });
+    });
 
     /**
      * To serve the random ad 
