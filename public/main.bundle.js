@@ -60,12 +60,16 @@ var AppComponent = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_routes__ = __webpack_require__("../../../../../src/app/app.routes.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_about_app_about_app_component__ = __webpack_require__("../../../../../src/app/components/about-app/about-app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_about_us_about_us_component__ = __webpack_require__("../../../../../src/app/components/about-us/about-us.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_app_events_app_events_component__ = __webpack_require__("../../../../../src/app/components/app-events/app-events.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_contact_us_contact_us_component__ = __webpack_require__("../../../../../src/app/components/contact-us/contact-us.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__("../../../common/@angular/common/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_routes__ = __webpack_require__("../../../../../src/app/app.routes.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_about_app_about_app_component__ = __webpack_require__("../../../../../src/app/components/about-app/about-app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_about_us_about_us_component__ = __webpack_require__("../../../../../src/app/components/about-us/about-us.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_app_events_app_events_component__ = __webpack_require__("../../../../../src/app/components/app-events/app-events.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_contact_us_contact_us_component__ = __webpack_require__("../../../../../src/app/components/contact-us/contact-us.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_common_mail_service__ = __webpack_require__("../../../../../src/app/services/common/mail.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_event_service__ = __webpack_require__("../../../../../src/app/services/event.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -74,9 +78,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 
 
+
+
 // routings
 
 // import components
+
+
 
 
 
@@ -88,18 +96,20 @@ var AppModule = /** @class */ (function () {
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_4__components_about_app_about_app_component__["a" /* AboutAppComponent */],
-                __WEBPACK_IMPORTED_MODULE_5__components_about_us_about_us_component__["a" /* AboutUsComponent */],
-                __WEBPACK_IMPORTED_MODULE_6__components_app_events_app_events_component__["a" /* AppEventsComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__components_contact_us_contact_us_component__["a" /* ContactUsComponent */]
+                __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_6__components_about_app_about_app_component__["a" /* AboutAppComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__components_about_us_about_us_component__["a" /* AboutUsComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__components_app_events_app_events_component__["a" /* AppEventsComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__components_contact_us_contact_us_component__["a" /* ContactUsComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_2__app_routes__["a" /* routing */]
+                __WEBPACK_IMPORTED_MODULE_4__app_routes__["a" /* routing */],
+                __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */]
             ],
-            providers: [],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]]
+            providers: [__WEBPACK_IMPORTED_MODULE_10__services_common_mail_service__["a" /* MailService */], __WEBPACK_IMPORTED_MODULE_11__services_event_service__["a" /* EventService */]],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
@@ -233,7 +243,7 @@ var AboutUsComponent = /** @class */ (function () {
 /***/ "../../../../../src/app/components/app-events/app-events.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "App Events"
+module.exports = "<div class=\"pw-screen-margin\">\r\n    <div class=\"pw-app__text-content\">\r\n        <span class=\"pw-app__title\">\r\n            Popular News and Event from PU!!!\r\n        </span>\r\n\r\n        <div class=\"pw-app-events row\">\r\n            <div class=\"col s12 m6\">\r\n                <div class=\"card\" *ngFor=\"let event of events\">\r\n                    <div class=\"card-image\">\r\n                        <img [src]=\"event.img-url\">\r\n                        <span class=\"card-title\">{{event.title}}</span>\r\n                        <a class=\"btn-floating halfway-fab waves-effect waves-light red\">\r\n                            <i class=\"material-icons\">add</i>\r\n                        </a>\r\n                    </div>\r\n                    <div class=\"card-content\">\r\n                        <p>{{event.description}}</p>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -243,23 +253,39 @@ module.exports = "App Events"
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppEventsComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_event_service__ = __webpack_require__("../../../../../src/app/services/event.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
 
 var AppEventsComponent = /** @class */ (function () {
-    function AppEventsComponent() {
+    function AppEventsComponent(eventService) {
+        this.eventService = eventService;
+        this.events = [];
+        this.initData();
     }
+    AppEventsComponent.prototype.initData = function () {
+        var _this = this;
+        this.eventService.getEvents().subscribe(function (appEvents) {
+            _this.events = appEvents.data;
+        });
+    };
     AppEventsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
             selector: "app-events",
             template: __webpack_require__("../../../../../src/app/components/app-events/app-events.component.html")
-        })
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_event_service__["a" /* EventService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_event_service__["a" /* EventService */]) === "function" && _a || Object])
     ], AppEventsComponent);
     return AppEventsComponent;
+    var _a;
 }());
 
 //# sourceMappingURL=app-events.component.js.map
@@ -269,7 +295,7 @@ var AppEventsComponent = /** @class */ (function () {
 /***/ "../../../../../src/app/components/contact-us/contact-us.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "App Events"
+module.exports = "<div class=\"pw-screen-margin\">\r\n    <div class=\"pw-app__text-content\">\r\n        <span class=\"pw-app__title\">\r\n            Hello from the other side!!!\r\n        </span>\r\n        <p>\r\n            We are glad to see you there. If you have any suggestion, you can write to us, we are open to suggestions.\r\n            <br> As alumni of Panjab University, we are always up and enthusiastic to do for our University and want to make\r\n            student's life easy and happening at Panjab University.\r\n        </p>\r\n        <p>\r\n            If you have any idea then we have some magical powers to turn it into reality. Even we can polish it in a better way :)\r\n        </p>\r\n        <div class=\"pw-contact-us\">\r\n            <div class=\"pw-contact-us__form\">\r\n                <div class=\"card\">\r\n                    <div class=\"card-content\">\r\n                        <form class=\"col s12\">\r\n                            <div class=\"row\">\r\n                                <div class=\"input-field col m6 s12\">\r\n                                    <i class=\"fa fa-user-circle prefix\"></i>\r\n                                    <input id=\"name\" type=\"text\" class=\"validate\">\r\n                                    <label for=\"name\">Name</label>\r\n                                </div>\r\n                                <div class=\"input-field col m6 s12\">\r\n                                    <i class=\"fa fa-envelope prefix\"></i>\r\n                                    <input id=\"email\" type=\"email\" class=\"validate\">\r\n                                    <label for=\"email\">Email</label>\r\n                                </div>\r\n                                <div class=\"input-field col s12\">\r\n                                    <i class=\"fa fa-comment-dots prefix\"></i>\r\n                                    <textarea id=\"message\" class=\"materialize-textarea\"></textarea>\r\n                                    <label for=\"message\">Message</label>\r\n                                </div>\r\n                                <button class=\"btn waves-effect waves-light col s3 offset-s9\" (click)=\"mailUs()\">Submit</button>\r\n                            </div>\r\n                        </form>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <div class=\"pw-contact-us__address\">\r\n                <span class=\"pw-contact-us__address-title\">\r\n                    <i class=\"fa fa-map-marker-alt\"></i>\r\n                    Our Magic Home\r\n                </span>\r\n                <p class=\"pw-contact-us__address-content\">\r\n                    HE-243,\r\n                    <br>Sector-59, Mohali\r\n                    <br>160059\r\n                </p>\r\n                <span class=\"pw-contact-us__address-title\">\r\n                    <i class=\"fa fa-phone\"></i>\r\n                    Talk to Us\r\n                </span>\r\n                <p class=\"pw-contact-us__address-content\">\r\n                    +91-9953-570-640,\r\n                    <br>\r\n                    <b>support@array151.com</b>\r\n                </p>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -279,26 +305,120 @@ module.exports = "App Events"
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactUsComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_common_mail_service__ = __webpack_require__("../../../../../src/app/services/common/mail.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
 
 var ContactUsComponent = /** @class */ (function () {
-    function ContactUsComponent() {
+    function ContactUsComponent(mailService) {
+        this.mailService = mailService;
     }
+    ContactUsComponent.prototype.mailUs = function () {
+        var data;
+        this.mailService.sendMail(data).subscribe(function (response) {
+            console.log("data");
+        });
+    };
     ContactUsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
             selector: "contact-us",
             template: __webpack_require__("../../../../../src/app/components/contact-us/contact-us.component.html")
-        })
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_common_mail_service__["a" /* MailService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_common_mail_service__["a" /* MailService */]) === "function" && _a || Object])
     ], ContactUsComponent);
     return ContactUsComponent;
+    var _a;
 }());
 
 //# sourceMappingURL=contact-us.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/common/mail.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MailService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/@angular/common/http.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Service to send mails
+ */
+var MailService = /** @class */ (function () {
+    function MailService(http) {
+        this.http = http;
+    }
+    MailService.prototype.sendMail = function (data) {
+        return this.http.post("/api/mail/send", data);
+    };
+    MailService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
+    ], MailService);
+    return MailService;
+    var _a;
+}());
+
+//# sourceMappingURL=mail.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/event.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/@angular/common/http.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * App events
+ */
+var EventService = /** @class */ (function () {
+    function EventService(http) {
+        this.http = http;
+    }
+    EventService.prototype.getEvents = function () {
+        return this.http.get("/api/notification/notifications");
+    };
+    EventService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
+    ], EventService);
+    return EventService;
+    var _a;
+}());
+
+//# sourceMappingURL=event.service.js.map
 
 /***/ }),
 
