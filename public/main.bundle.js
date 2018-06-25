@@ -243,7 +243,7 @@ var AboutUsComponent = /** @class */ (function () {
 /***/ "../../../../../src/app/components/app-events/app-events.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"pw-screen-margin\">\r\n    <div class=\"pw-app__text-content\">\r\n        <span class=\"pw-app__title\">\r\n            Popular News and Event from PU!!!\r\n        </span>\r\n\r\n        <div class=\"pw-app-events row\">\r\n            <div class=\"col s12 m6\">\r\n                <div class=\"card\" *ngFor=\"let event of events\">\r\n                    <div class=\"card-image\">\r\n                        <img [src]=\"event.img-url\">\r\n                        <span class=\"card-title\">{{event.title}}</span>\r\n                        <a class=\"btn-floating halfway-fab waves-effect waves-light red\">\r\n                            <i class=\"material-icons\">add</i>\r\n                        </a>\r\n                    </div>\r\n                    <div class=\"card-content\">\r\n                        <p>{{event.description}}</p>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"pw-screen-margin\">\r\n    <div class=\"pw-app__text-content\">\r\n        <span class=\"pw-app__title\">\r\n            Popular News and Event from PU!!!\r\n        </span>\r\n\r\n        <div class=\"pw-app-events\">\r\n            <div class=\"card\" *ngFor=\"let event of events\" (click)=\"showMore(cardContent)\">\r\n                <div class=\"card-image\">\r\n                    <img [src]=\"event.img_url\">\r\n                    <span class=\"card-title\">{{event.title}}</span>\r\n                </div>\r\n                <div class=\"card-content card-content--hide\" #cardContent>\r\n                    <p>{{event.description}}</p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -275,6 +275,76 @@ var AppEventsComponent = /** @class */ (function () {
         var _this = this;
         this.eventService.getEvents().subscribe(function (appEvents) {
             _this.events = appEvents.data;
+            // this.events = [{
+            //   created_on: "2018-06-14T09:42:00.612115",
+            //   description
+            //     :
+            //     "#PUAdmission It's that time of the year again! A long list of queries, confusions, misconceptions, doubts and what not.Let it all shun away as we are here to show you the right way. To put you under an umbrella of the right guidance and support, PU Mirror is available round the clock to help you make it through the PU Admissions 2018-19.",
+            //   end_date
+            //     :
+            //     "2018-07-15T00:00:00+00:00",
+            //   id
+            //     :
+            //     24,
+            //   img_url
+            //     :
+            //     "https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/33576010_922863327885944_5303460878782300160_n.jpg?_nc_cat=0&oh=564cea3be061561e4cae7f79ff0f02e3&oe=5BBB8F2D",
+            //   link
+            //     :
+            //     "https://www.facebook.com/pumirror1/photos/a.451444408361174.1073741829.440897942749154/922863324552611/?type=3",
+            //   start_date
+            //     :
+            //     "2018-06-14T00:00:00+00:00",
+            //   title
+            //     :
+            //     "PU Admissions 2018-2019"
+            // }, {
+            //   created_on: "2018-06-14T09:42:00.612115",
+            //   description
+            //     :
+            //     "#PUAdmission It's that time of the year again! A long list of queries, confusions, misconceptions, doubts and what not.Let it all shun away as we are here to show you the right way. To put you under an umbrella of the right guidance and support, PU Mirror is available round the clock to help you make it through the PU Admissions 2018-19.",
+            //   end_date
+            //     :
+            //     "2018-07-15T00:00:00+00:00",
+            //   id
+            //     :
+            //     24,
+            //   img_url
+            //     :
+            //     "https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/33576010_922863327885944_5303460878782300160_n.jpg?_nc_cat=0&oh=564cea3be061561e4cae7f79ff0f02e3&oe=5BBB8F2D",
+            //   link
+            //     :
+            //     "https://www.facebook.com/pumirror1/photos/a.451444408361174.1073741829.440897942749154/922863324552611/?type=3",
+            //   start_date
+            //     :
+            //     "2018-06-14T00:00:00+00:00",
+            //   title
+            //     :
+            //     "PU Admissions 2018-2019"
+            // }, {
+            //   created_on: "2018-06-14T09:42:00.612115",
+            //   description
+            //     :
+            //     "#PUAdmission It's that time of the year again! A long list of queries, confusions, misconceptions, doubts and what not.Let it all shun away as we are here to show you the right way. To put you under an umbrella of the right guidance and support, PU Mirror is available round the clock to help you make it through the PU Admissions 2018-19.",
+            //   end_date
+            //     :
+            //     "2018-07-15T00:00:00+00:00",
+            //   id
+            //     :
+            //     24,
+            //   img_url
+            //     :
+            //     "https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/33576010_922863327885944_5303460878782300160_n.jpg?_nc_cat=0&oh=564cea3be061561e4cae7f79ff0f02e3&oe=5BBB8F2D",
+            //   link
+            //     :
+            //     "https://www.facebook.com/pumirror1/photos/a.451444408361174.1073741829.440897942749154/922863324552611/?type=3",
+            //   start_date
+            //     :
+            //     "2018-06-14T00:00:00+00:00",
+            //   title
+            //     :
+            //     "PU Admissions 2018-2019"
+            // }]
         });
     };
     AppEventsComponent = __decorate([
