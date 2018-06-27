@@ -1,11 +1,9 @@
 var nodemailer = require('nodemailer');
 
 var transporter = nodemailer.createTransport({
-    host: 'mail.array151.com',
-    port:587,
-    secure: false,
+    service: 'gmail',
     auth: {
-        user: process.env.MAIL_USER,
+        user: process.env.MAIL_USER_FROM,
         pass: process.env.MAIL_PASSWORD
     }
 });
@@ -15,16 +13,15 @@ module.exports = function (router) {
      * To send mail
      */
     router.post("/send", (req, res) => {
-        console.log("Mail", req.body);
-        var mailContent = ` Name : ${req.body.name}
-        Email : ${req.body.email},
-        Message ;${req.body.message}
+        var mailContent = ` <b>Name</b> : ${req.body.name} <br>
+        <b>Email</b> : ${req.body.email}<br>
+        <b>Message </b>:${req.body.message}
         `;
         mailOptions = {
-            from: process.env.MAIL_USER,
-            to: process.env.MAIL_USER,
+            from: process.env.MAIL_USER_FROM,
+            to: process.env.MAIL_USER_TO,
             subject: 'Contact from PuWifiWeb',
-            text: mailContent
+            html: mailContent
         }
         transporter.sendMail(mailOptions, function (error, info) {
             if (error) {
