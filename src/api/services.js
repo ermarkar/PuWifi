@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-const path = require('path');
 
 module.exports = function (app) {
     app.use('/api/ads', require('./custom-ads')(router));
@@ -10,7 +9,6 @@ module.exports = function (app) {
 
     // Redirect to web app if call is not for an api
     app.get('*', function (req, res) {
-        console.log(process.cwd())
         res.sendFile( process.cwd() + '/public/index.html');
     });
 }
