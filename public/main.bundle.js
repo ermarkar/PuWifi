@@ -20,7 +20,7 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_gendir lazy recursive";
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n    <nav>\r\n        <div class=\"nav-wrapper pw-screen-margin\">\r\n            <a href=\"#\" class=\"pw-logo\">PuWifi</a>\r\n            <ul id=\"nav-mobile\" class=\"right hide-on-small-and-down\">\r\n                <li>\r\n                    <a [routerLink]=\"['/home']\">Home</a>\r\n                </li>\r\n                <li>\r\n                    <a [routerLink]=\"['/app-events']\">App Events</a>\r\n                </li>\r\n                <li>\r\n                    <a [routerLink]=\"['/about-us']\">About Us</a>\r\n                </li>\r\n                <li>\r\n                    <a [routerLink]=\"['/contact-us']\">Contact Us</a>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </nav>\r\n</div>\r\n\r\n<div class=\"pw-content-area\">\r\n    <!-- Router Outlet -->\r\n    <router-outlet></router-outlet>\r\n</div>\r\n\r\n<div class=\"pw-footer\">\r\n    <div class=\"pw-footer__title\">\r\n        Follow Us\r\n    </div>\r\n    <div>\r\n        <ul class=\"pw-footer__social\">\r\n            <li>\r\n                <a target=\"_blank\" title=\"Facebook\" href=\"https://www.facebook.com/array151/\">\r\n                    <i class=\"pw-footer__social-icon fab fa-facebook-f\"></i>\r\n                </a>\r\n            </li>\r\n\r\n            <li>\r\n                <a target=\"_blank\" title=\"Twitter\" href=\"https://www.twitter.com/array151/\">\r\n                    <i class=\"pw-footer__social-icon fab fa-twitter\"></i>\r\n                </a>\r\n            </li>\r\n\r\n            <li>\r\n                <a target=\"_blank\" title=\"YouTube\" href=\"https://www.youtube.com/channel/UCLpJhzuN3flKmkqW7AvK9TQ\">\r\n                    <i class=\"pw-footer__social-icon fab fa-youtube\"></i>\r\n                </a>\r\n            </li>\r\n\r\n            <li>\r\n                <a target=\"_blank\" title=\"Instagram\" href=\"https://www.instagram.com/array151/\">\r\n                    <i class=\"pw-footer__social-icon fab fa-instagram\"></i>\r\n                </a>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n\r\n    <div class=\"pw-footer__copyright\">\r\n        Copyright © 2018 PuWifi\r\n        <div style=\"text-align: center\">\r\n            <a href=\"http://www.array151.com\" target=\"_blank\">Array151</a>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<div>\r\n    <nav>\r\n        <div class=\"nav-wrapper pw-screen-margin\">\r\n            <a href=\"#\" class=\"pw-logo\">PuWifi</a>\r\n            <ul id=\"nav-mobile\" class=\"right hide-on-small-and-down\">\r\n                <li>\r\n                    <a [routerLink]=\"['/home']\">Home</a>\r\n                </li>\r\n                <li>\r\n                    <a [routerLink]=\"['/app-events']\">App Events</a>\r\n                </li>\r\n                <li>\r\n                    <a [routerLink]=\"['/about-us']\">About Us</a>\r\n                </li>\r\n                <li>\r\n                    <a [routerLink]=\"['/contact-us']\">Contact Us</a>\r\n                </li>\r\n            </ul>\r\n\r\n            <a href='#' data-target='menu_dropdown' class=\"pw-menu-btn dropdown-trigger hide-on-med-and-up\" #menuDropdown>\r\n                <i class=\"fa fa-bars\" style=\"margin-top:15px\"></i>\r\n            </a>\r\n\r\n            <!-- Dropdown Structure -->\r\n            <ul id='menu_dropdown' class='dropdown-content'>\r\n                <li>\r\n                    <a [routerLink]=\"['/home']\">Home</a>\r\n                </li>\r\n                <li class=\"divider\" tabindex=\"-1\"></li>\r\n                <li>\r\n                    <a [routerLink]=\"['/app-events']\">App Events</a>\r\n                </li>\r\n                <li class=\"divider\" tabindex=\"-1\"></li>\r\n                <li>\r\n                    <a [routerLink]=\"['/about-us']\">About Us</a>\r\n                </li>\r\n                <li class=\"divider\" tabindex=\"-1\"></li>\r\n                <li>\r\n                    <a [routerLink]=\"['/contact-us']\">Contact Us</a>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </nav>\r\n</div>\r\n\r\n<div class=\"pw-content-area\">\r\n    <!-- Router Outlet -->\r\n    <router-outlet></router-outlet>\r\n</div>\r\n\r\n<div class=\"pw-footer\">\r\n    <div class=\"pw-footer__title\">\r\n        Follow Us\r\n    </div>\r\n    <div>\r\n        <ul class=\"pw-footer__social\">\r\n            <li>\r\n                <a target=\"_blank\" title=\"Facebook\" href=\"https://www.facebook.com/array151/\">\r\n                    <i class=\"pw-footer__social-icon fab fa-facebook-f\"></i>\r\n                </a>\r\n            </li>\r\n\r\n            <li>\r\n                <a target=\"_blank\" title=\"Twitter\" href=\"https://www.twitter.com/array151/\">\r\n                    <i class=\"pw-footer__social-icon fab fa-twitter\"></i>\r\n                </a>\r\n            </li>\r\n\r\n            <li>\r\n                <a target=\"_blank\" title=\"YouTube\" href=\"https://www.youtube.com/channel/UCLpJhzuN3flKmkqW7AvK9TQ\">\r\n                    <i class=\"pw-footer__social-icon fab fa-youtube\"></i>\r\n                </a>\r\n            </li>\r\n\r\n            <li>\r\n                <a target=\"_blank\" title=\"Instagram\" href=\"https://www.instagram.com/array151/\">\r\n                    <i class=\"pw-footer__social-icon fab fa-instagram\"></i>\r\n                </a>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n\r\n    <div class=\"pw-footer__copyright\">\r\n        Copyright © 2018 PuWifi\r\n        <div style=\"text-align: center\">\r\n            <a href=\"http://www.array151.com\" target=\"_blank\">Array151</a>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -30,16 +30,29 @@ module.exports = "<div>\r\n    <nav>\r\n        <div class=\"nav-wrapper pw-scre
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_materialize_css_dist_js_materialize__ = __webpack_require__("../../../../materialize-css/dist/js/materialize.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_materialize_css_dist_js_materialize___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_materialize_css_dist_js_materialize__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
 
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
     }
+    AppComponent.prototype.ngAfterViewInit = function () {
+        var iDropdown = new __WEBPACK_IMPORTED_MODULE_1_materialize_css_dist_js_materialize__["Dropdown"](this.elDropdown.nativeElement, {});
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* ViewChild */])("menuDropdown"),
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ElementRef */]) === "function" && _a || Object)
+    ], AppComponent.prototype, "elDropdown", void 0);
     AppComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
             selector: "puwifi-app",
@@ -47,6 +60,7 @@ var AppComponent = /** @class */ (function () {
         })
     ], AppComponent);
     return AppComponent;
+    var _a;
 }());
 
 //# sourceMappingURL=app.component.js.map
@@ -106,7 +120,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_4__app_routes__["a" /* routing */],
                 __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["b" /* HttpClientModule */],
-                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */]
+                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* ReactiveFormsModule */]
             ],
             providers: [__WEBPACK_IMPORTED_MODULE_10__services_common_mail_service__["a" /* MailService */], __WEBPACK_IMPORTED_MODULE_11__services_event_service__["a" /* EventService */]],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
@@ -243,7 +257,7 @@ var AboutUsComponent = /** @class */ (function () {
 /***/ "../../../../../src/app/components/app-events/app-events.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"pw-screen-margin\">\r\n    <div class=\"pw-app__text-content\">\r\n        <span class=\"pw-app__title\">\r\n            Popular News and Event from PU!!!\r\n        </span>\r\n\r\n        <div class=\"pw-app-events\">\r\n            <div class=\"card\" *ngFor=\"let event of events\" (click)=\"showMore(cardContent)\">\r\n                <div class=\"card-image\">\r\n                    <img [src]=\"event.img_url\">\r\n                    <span class=\"card-title\">{{event.title}}</span>\r\n                </div>\r\n                <div class=\"card-content card-content--hide\" #cardContent>\r\n                    <p>{{event.description}}</p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"pw-screen-margin\">\r\n    <div class=\"pw-app__text-content\">\r\n        <span class=\"pw-app__title\">\r\n            Popular News and Event from PU!!!\r\n        </span>\r\n\r\n        <div class=\"pw-app-events\">\r\n            <div class=\"card\" *ngFor=\"let event of events\" (click)=\"showMore(cardContent)\">\r\n                <div class=\"card-image\">\r\n                    <img [src]=\"event.img_url\">\r\n                </div>\r\n                <div class=\"card-content\" #cardContent>\r\n                    <p>{{event.title}}</p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -272,80 +286,37 @@ var AppEventsComponent = /** @class */ (function () {
         this.initData();
     }
     AppEventsComponent.prototype.initData = function () {
-        var _this = this;
-        this.eventService.getEvents().subscribe(function (appEvents) {
-            _this.events = appEvents.data;
-            // this.events = [{
-            //   created_on: "2018-06-14T09:42:00.612115",
-            //   description
-            //     :
-            //     "#PUAdmission It's that time of the year again! A long list of queries, confusions, misconceptions, doubts and what not.Let it all shun away as we are here to show you the right way. To put you under an umbrella of the right guidance and support, PU Mirror is available round the clock to help you make it through the PU Admissions 2018-19.",
-            //   end_date
-            //     :
-            //     "2018-07-15T00:00:00+00:00",
-            //   id
-            //     :
-            //     24,
-            //   img_url
-            //     :
-            //     "https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/33576010_922863327885944_5303460878782300160_n.jpg?_nc_cat=0&oh=564cea3be061561e4cae7f79ff0f02e3&oe=5BBB8F2D",
-            //   link
-            //     :
-            //     "https://www.facebook.com/pumirror1/photos/a.451444408361174.1073741829.440897942749154/922863324552611/?type=3",
-            //   start_date
-            //     :
-            //     "2018-06-14T00:00:00+00:00",
-            //   title
-            //     :
-            //     "PU Admissions 2018-2019"
-            // }, {
-            //   created_on: "2018-06-14T09:42:00.612115",
-            //   description
-            //     :
-            //     "#PUAdmission It's that time of the year again! A long list of queries, confusions, misconceptions, doubts and what not.Let it all shun away as we are here to show you the right way. To put you under an umbrella of the right guidance and support, PU Mirror is available round the clock to help you make it through the PU Admissions 2018-19.",
-            //   end_date
-            //     :
-            //     "2018-07-15T00:00:00+00:00",
-            //   id
-            //     :
-            //     24,
-            //   img_url
-            //     :
-            //     "https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/33576010_922863327885944_5303460878782300160_n.jpg?_nc_cat=0&oh=564cea3be061561e4cae7f79ff0f02e3&oe=5BBB8F2D",
-            //   link
-            //     :
-            //     "https://www.facebook.com/pumirror1/photos/a.451444408361174.1073741829.440897942749154/922863324552611/?type=3",
-            //   start_date
-            //     :
-            //     "2018-06-14T00:00:00+00:00",
-            //   title
-            //     :
-            //     "PU Admissions 2018-2019"
-            // }, {
-            //   created_on: "2018-06-14T09:42:00.612115",
-            //   description
-            //     :
-            //     "#PUAdmission It's that time of the year again! A long list of queries, confusions, misconceptions, doubts and what not.Let it all shun away as we are here to show you the right way. To put you under an umbrella of the right guidance and support, PU Mirror is available round the clock to help you make it through the PU Admissions 2018-19.",
-            //   end_date
-            //     :
-            //     "2018-07-15T00:00:00+00:00",
-            //   id
-            //     :
-            //     24,
-            //   img_url
-            //     :
-            //     "https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/33576010_922863327885944_5303460878782300160_n.jpg?_nc_cat=0&oh=564cea3be061561e4cae7f79ff0f02e3&oe=5BBB8F2D",
-            //   link
-            //     :
-            //     "https://www.facebook.com/pumirror1/photos/a.451444408361174.1073741829.440897942749154/922863324552611/?type=3",
-            //   start_date
-            //     :
-            //     "2018-06-14T00:00:00+00:00",
-            //   title
-            //     :
-            //     "PU Admissions 2018-2019"
-            // }]
-        });
+        // this.eventService.getEvents().subscribe((appEvents: any) => {
+        //   this.events = appEvents.data;
+        this.events = [{
+                created_on: "2018-06-14T09:42:00.612115",
+                description: "#PUAdmission It's that time of the year again! A long list of queries, confusions, misconceptions, doubts and what not.Let it all shun away as we are here to show you the right way. To put you under an umbrella of the right guidance and support, PU Mirror is available round the clock to help you make it through the PU Admissions 2018-19.",
+                end_date: "2018-07-15T00:00:00+00:00",
+                id: 24,
+                img_url: "https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/33576010_922863327885944_5303460878782300160_n.jpg?_nc_cat=0&oh=564cea3be061561e4cae7f79ff0f02e3&oe=5BBB8F2D",
+                link: "https://www.facebook.com/pumirror1/photos/a.451444408361174.1073741829.440897942749154/922863324552611/?type=3",
+                start_date: "2018-06-14T00:00:00+00:00",
+                title: "PU Admissions 2018-2019"
+            }, {
+                created_on: "2018-06-14T09:42:00.612115",
+                description: "#PUAdmission It's that time of the year again! A long list of queries, confusions, misconceptions, doubts and what not.Let it all shun away as we are here to show you the right way. To put you under an umbrella of the right guidance and support, PU Mirror is available round the clock to help you make it through the PU Admissions 2018-19.",
+                end_date: "2018-07-15T00:00:00+00:00",
+                id: 24,
+                img_url: "https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/33576010_922863327885944_5303460878782300160_n.jpg?_nc_cat=0&oh=564cea3be061561e4cae7f79ff0f02e3&oe=5BBB8F2D",
+                link: "https://www.facebook.com/pumirror1/photos/a.451444408361174.1073741829.440897942749154/922863324552611/?type=3",
+                start_date: "2018-06-14T00:00:00+00:00",
+                title: "PU Admissions 2018-2019"
+            }, {
+                created_on: "2018-06-14T09:42:00.612115",
+                description: "#PUAdmission It's that time of the year again! A long list of queries, confusions, misconceptions, doubts and what not.Let it all shun away as we are here to show you the right way. To put you under an umbrella of the right guidance and support, PU Mirror is available round the clock to help you make it through the PU Admissions 2018-19.",
+                end_date: "2018-07-15T00:00:00+00:00",
+                id: 24,
+                img_url: "https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/33576010_922863327885944_5303460878782300160_n.jpg?_nc_cat=0&oh=564cea3be061561e4cae7f79ff0f02e3&oe=5BBB8F2D",
+                link: "https://www.facebook.com/pumirror1/photos/a.451444408361174.1073741829.440897942749154/922863324552611/?type=3",
+                start_date: "2018-06-14T00:00:00+00:00",
+                title: "PU Admissions 2018-2019"
+            }];
+        // });
     };
     AppEventsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
@@ -365,7 +336,7 @@ var AppEventsComponent = /** @class */ (function () {
 /***/ "../../../../../src/app/components/contact-us/contact-us.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"pw-screen-margin\">\r\n    <div class=\"pw-app__text-content\">\r\n        <span class=\"pw-app__title\">\r\n            Hello from the other side!!!\r\n        </span>\r\n        <p>\r\n            We are glad to see you there. If you have any suggestion, you can write to us, we are open to suggestions.\r\n            <br> As alumni of Panjab University, we are always up and enthusiastic to do for our University and want to make\r\n            student's life easy and happening at Panjab University.\r\n        </p>\r\n        <p>\r\n            If you have any idea then we have some magical powers to turn it into reality. Even we can polish it in a better way :)\r\n        </p>\r\n        <div class=\"pw-contact-us\">\r\n            <div class=\"pw-contact-us__form\">\r\n                <div class=\"card\">\r\n                    <div class=\"card-content\">\r\n                        <form class=\"col s12\">\r\n                            <div class=\"row\">\r\n                                <div class=\"input-field col m6 s12\">\r\n                                    <i class=\"fa fa-user-circle prefix\"></i>\r\n                                    <input id=\"name\" type=\"text\" class=\"validate\">\r\n                                    <label for=\"name\">Name</label>\r\n                                </div>\r\n                                <div class=\"input-field col m6 s12\">\r\n                                    <i class=\"fa fa-envelope prefix\"></i>\r\n                                    <input id=\"email\" type=\"email\" class=\"validate\">\r\n                                    <label for=\"email\">Email</label>\r\n                                </div>\r\n                                <div class=\"input-field col s12\">\r\n                                    <i class=\"fa fa-comment-dots prefix\"></i>\r\n                                    <textarea id=\"message\" class=\"materialize-textarea\"></textarea>\r\n                                    <label for=\"message\">Message</label>\r\n                                </div>\r\n                                <button class=\"btn waves-effect waves-light col s3 offset-s9\" (click)=\"mailUs()\">Submit</button>\r\n                            </div>\r\n                        </form>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <div class=\"pw-contact-us__address\">\r\n                <span class=\"pw-contact-us__address-title\">\r\n                    <i class=\"fa fa-map-marker-alt\"></i>\r\n                    Our Magic Home\r\n                </span>\r\n                <p class=\"pw-contact-us__address-content\">\r\n                    HE-243,\r\n                    <br>Sector-59, Mohali\r\n                    <br>160059\r\n                </p>\r\n                <span class=\"pw-contact-us__address-title\">\r\n                    <i class=\"fa fa-phone\"></i>\r\n                    Talk to Us\r\n                </span>\r\n                <p class=\"pw-contact-us__address-content\">\r\n                    +91-9953-570-640,\r\n                    <br>\r\n                    <b>support@array151.com</b>\r\n                </p>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"pw-screen-margin\">\r\n    <div class=\"pw-app__text-content\">\r\n        <span class=\"pw-app__title\">\r\n            Hello from the other side!!!\r\n        </span>\r\n        <p>\r\n            We are glad to see you there. If you have any suggestion, you can write to us, we are open to suggestions.\r\n            <br> As alumni of Panjab University, we are always up and enthusiastic to do for our University and want to make\r\n            student's life easy and happening at Panjab University.\r\n        </p>\r\n        <p>\r\n            If you have any idea then we have some magical powers to turn it into reality. Even we can polish it in a better way :)\r\n        </p>\r\n        <div class=\"pw-contact-us\">\r\n            <div class=\"pw-contact-us__form\">\r\n                <div class=\"card\">\r\n                    <div class=\"card-content\">\r\n                        <form [formGroup]=\"contactUsForm\" (ngSubmit)=\"mailUs(contactUsForm.value)\" class=\"col s12\">\r\n                            <div class=\"row\">\r\n                                <div class=\"input-field col m6 s12\">\r\n                                    <i class=\"fa fa-user-circle prefix\"></i>\r\n                                    <input formControlName=\"name\" id=\"name\" type=\"text\" class=\"validate\">\r\n                                    <label for=\"name\">Name</label>\r\n                                </div>\r\n                                <div class=\"input-field col m6 s12\">\r\n                                    <i class=\"fa fa-envelope prefix\"></i>\r\n                                    <input formControlName=\"emailId\" id=\"email\" type=\"email\" class=\"validate\">\r\n                                    <label for=\"email\">Email</label>\r\n                                </div>\r\n                                <div class=\"input-field col s12\">\r\n                                    <i class=\"fa fa-comment-dots prefix\"></i>\r\n                                    <textarea formControlName=\"message\" id=\"message\" class=\"materialize-textarea\"></textarea>\r\n                                    <label for=\"message\">Message</label>\r\n                                </div>\r\n                                <button type=\"submit\" [disabled] = \"!contactUsForm.valid\" class=\"btn waves-effect waves-light col s3 offset-s9\">Submit</button>\r\n                            </div>\r\n                        </form>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <div class=\"pw-contact-us__address\">\r\n                <span class=\"pw-contact-us__address-title\">\r\n                    <i class=\"fa fa-map-marker-alt\"></i>\r\n                    Our Magic Home\r\n                </span>\r\n                <p class=\"pw-contact-us__address-content\">\r\n                    HE-243,\r\n                    <br>Sector-59, Mohali\r\n                    <br>160059\r\n                </p>\r\n                <span class=\"pw-contact-us__address-title\">\r\n                    <i class=\"fa fa-phone\"></i>\r\n                    Talk to Us\r\n                </span>\r\n                <p class=\"pw-contact-us__address-content\">\r\n                    +91-9953-570-640,\r\n                    <br>\r\n                    <b>support@array151.com</b>\r\n                </p>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -376,6 +347,9 @@ module.exports = "<div class=\"pw-screen-margin\">\r\n    <div class=\"pw-app__t
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactUsComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_common_mail_service__ = __webpack_require__("../../../../../src/app/services/common/mail.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_materialize_css_dist_js_materialize__ = __webpack_require__("../../../../materialize-css/dist/js/materialize.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_materialize_css_dist_js_materialize___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_materialize_css_dist_js_materialize__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -387,14 +361,38 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
 var ContactUsComponent = /** @class */ (function () {
     function ContactUsComponent(mailService) {
         this.mailService = mailService;
     }
-    ContactUsComponent.prototype.mailUs = function () {
-        var data;
+    ContactUsComponent.prototype.ngOnInit = function () {
+        this.contactUsForm = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormGroup */]({
+            name: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]("", __WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* Validators */].compose([
+                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* Validators */].required
+            ])),
+            emailId: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]("", __WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* Validators */].compose([
+                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* Validators */].required,
+                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* Validators */].pattern("[^ @]*@[^ @]*")
+            ])),
+            message: new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormControl */]("", __WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* Validators */].compose([
+                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* Validators */].required
+            ]))
+        });
+    };
+    ContactUsComponent.prototype.mailUs = function (data) {
+        var _this = this;
         this.mailService.sendMail(data).subscribe(function (response) {
-            console.log("data");
+            if (response.message) {
+                var toastHTML = 'Thanks for contacting us!!';
+                __WEBPACK_IMPORTED_MODULE_3_materialize_css_dist_js_materialize__["toast"]({ html: toastHTML, classes: "rounded" });
+                _this.contactUsForm.reset();
+            }
+            else {
+                var toastHTML = 'Something went wrong :(';
+                __WEBPACK_IMPORTED_MODULE_3_materialize_css_dist_js_materialize__["toast"]({ html: toastHTML, classes: "rounded" });
+            }
         });
     };
     ContactUsComponent = __decorate([
