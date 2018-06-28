@@ -14,7 +14,7 @@ module.exports = function (router) {
      */
     router.post("/send", (req, res) => {
         var mailContent = ` <b>Name</b> : ${req.body.name} <br>
-        <b>Email</b> : ${req.body.email}<br>
+        <b>Email</b> : ${req.body.emailId}<br>
         <b>Message </b>:${req.body.message}
         `;
         mailOptions = {
