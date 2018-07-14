@@ -18,9 +18,21 @@ module.exports = function (router) {
             if (err) {
                 res.status(400).send(err);
             } else {
-                var totalNotifications = 0;
-                // console.log(result[0].notifications[0].total);
                 return res.send(result[0].notifications);
+            }
+        });
+    });
+
+    /**
+     * To get notification tags
+     */
+    router.get("/getnotificationtags", (req, res) => {
+        var query = "select * from get_notification_tags() as tagsData;";
+        db.query(query, (err, result) => {
+            if (err) {
+                res.status(400).send(err);
+            } else {
+                return res.send(result[0]);
             }
         });
     });
@@ -35,6 +47,7 @@ module.exports = function (router) {
         var link = req.body.link || "";
         var startDate = req.body.startDate;
         var endDate = req.body.endDate;
+        var tags = req.body.tags.replaceAll("'","\"");
 
         var token = req.body.token;
 
@@ -42,7 +55,7 @@ module.exports = function (router) {
             return res.send({ "error": "Invalid token." });
         }
 
-        if (!title || !startDate) {
+        if (!title || !startDate || !tags) {
             return res.send({ "error": "Title or Start date is missing" });
         }
 
@@ -50,6 +63,7 @@ module.exports = function (router) {
             + "','" + link
             + "','" + startDate
             + "','" + endDate
+            + "','" + tags
             + "') as result;";
 
         db.query(query, (err, result) => {
