@@ -20,7 +20,7 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_gendir lazy recursive";
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n    <nav>\r\n        <div class=\"nav-wrapper pw-screen-margin\">\r\n            <a href=\"#\" class=\"pw-logo\">PuWifi</a>\r\n            <ul id=\"nav-mobile\" class=\"right hide-on-small-and-down\">\r\n                <li>\r\n                    <a [routerLink]=\"['/home']\">Home</a>\r\n                </li>\r\n                <li>\r\n                    <a [routerLink]=\"['/app-events']\">App Events</a>\r\n                </li>\r\n                <li>\r\n                    <a [routerLink]=\"['/about-us']\">About Us</a>\r\n                </li>\r\n                <li>\r\n                    <a [routerLink]=\"['/contact-us']\">Contact Us</a>\r\n                </li>\r\n            </ul>\r\n\r\n            <a href='#' data-target='menu_dropdown' class=\"pw-menu-btn dropdown-trigger hide-on-med-and-up\" #menuDropdown>\r\n                <i class=\"fa fa-bars\" style=\"margin-top:15px\"></i>\r\n            </a>\r\n\r\n            <!-- Dropdown Structure -->\r\n            <ul id='menu_dropdown' class='dropdown-content'>\r\n                <li>\r\n                    <a [routerLink]=\"['/home']\">Home</a>\r\n                </li>\r\n                <li class=\"divider\" tabindex=\"-1\"></li>\r\n                <li>\r\n                    <a [routerLink]=\"['/app-events']\">App Events</a>\r\n                </li>\r\n                <li class=\"divider\" tabindex=\"-1\"></li>\r\n                <li>\r\n                    <a [routerLink]=\"['/about-us']\">About Us</a>\r\n                </li>\r\n                <li class=\"divider\" tabindex=\"-1\"></li>\r\n                <li>\r\n                    <a [routerLink]=\"['/contact-us']\">Contact Us</a>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </nav>\r\n</div>\r\n\r\n<div class=\"pw-content-area\">\r\n    <!-- Router Outlet -->\r\n    <router-outlet></router-outlet>\r\n</div>\r\n\r\n<div class=\"pw-footer\">\r\n    <div class=\"pw-footer__title\">\r\n        Follow Us\r\n    </div>\r\n    <div>\r\n        <ul class=\"pw-footer__social\">\r\n            <li>\r\n                <a target=\"_blank\" title=\"Facebook\" href=\"https://www.facebook.com/array151/\">\r\n                    <i class=\"pw-footer__social-icon fab fa-facebook-f\"></i>\r\n                </a>\r\n            </li>\r\n\r\n            <li>\r\n                <a target=\"_blank\" title=\"Twitter\" href=\"https://www.twitter.com/array151/\">\r\n                    <i class=\"pw-footer__social-icon fab fa-twitter\"></i>\r\n                </a>\r\n            </li>\r\n\r\n            <li>\r\n                <a target=\"_blank\" title=\"YouTube\" href=\"https://www.youtube.com/channel/UCLpJhzuN3flKmkqW7AvK9TQ\">\r\n                    <i class=\"pw-footer__social-icon fab fa-youtube\"></i>\r\n                </a>\r\n            </li>\r\n\r\n            <li>\r\n                <a target=\"_blank\" title=\"Instagram\" href=\"https://www.instagram.com/array151/\">\r\n                    <i class=\"pw-footer__social-icon fab fa-instagram\"></i>\r\n                </a>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n\r\n    <div class=\"pw-footer__copyright\">\r\n        Copyright © 2018 PuWifi\r\n        <div style=\"text-align: center\">\r\n            <a href=\"http://www.array151.com\" target=\"_blank\">Array151</a>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"pw\">\r\n    <div>\r\n        <nav>\r\n            <div class=\"nav-wrapper pw-screen-margin\">\r\n                <a href=\"#\" class=\"pw-logo\">PuWifi</a>\r\n                <ul id=\"nav-mobile\" class=\"right hide-on-small-and-down\">\r\n                    <li>\r\n                        <a [routerLink]=\"['/home']\">Home</a>\r\n                    </li>\r\n                    <li>\r\n                        <a [routerLink]=\"['/app-events']\">App Events</a>\r\n                    </li>\r\n                    <li>\r\n                        <a [routerLink]=\"['/about-us']\">About Us</a>\r\n                    </li>\r\n                    <li>\r\n                        <a [routerLink]=\"['/contact-us']\">Contact Us</a>\r\n                    </li>\r\n                </ul>\r\n            </div>\r\n        </nav>\r\n    </div>\r\n\r\n    <div class=\"pw-content-area\">\r\n        <!-- Router Outlet -->\r\n        <router-outlet></router-outlet>\r\n    </div>\r\n\r\n    <div class=\"pw-footer\">\r\n        <div class=\"pw-footer__title\">\r\n            Follow Us\r\n        </div>\r\n        <div>\r\n            <ul class=\"pw-footer__social\">\r\n                <li>\r\n                    <a target=\"_blank\" title=\"Facebook\" href=\"https://www.facebook.com/array151/\">\r\n                        <i class=\"pw-footer__social-icon fab fa-facebook-f\"></i>\r\n                    </a>\r\n                </li>\r\n\r\n                <li>\r\n                    <a target=\"_blank\" title=\"Twitter\" href=\"https://www.twitter.com/array151/\">\r\n                        <i class=\"pw-footer__social-icon fab fa-twitter\"></i>\r\n                    </a>\r\n                </li>\r\n\r\n                <li>\r\n                    <a target=\"_blank\" title=\"YouTube\" href=\"https://www.youtube.com/channel/UCLpJhzuN3flKmkqW7AvK9TQ\">\r\n                        <i class=\"pw-footer__social-icon fab fa-youtube\"></i>\r\n                    </a>\r\n                </li>\r\n\r\n                <li>\r\n                    <a target=\"_blank\" title=\"Instagram\" href=\"https://www.instagram.com/array151/\">\r\n                        <i class=\"pw-footer__social-icon fab fa-instagram\"></i>\r\n                    </a>\r\n                </li>\r\n            </ul>\r\n\r\n            <a href='#' data-target='menu_dropdown' class=\"pw-menu-btn dropdown-trigger hide-on-med-and-up\" #menuDropdown>\r\n                <i class=\"fa fa-bars\" style=\"margin-top:15px\"></i>\r\n            </a>\r\n\r\n            <!-- Dropdown Structure -->\r\n            <ul id='menu_dropdown' class='dropdown-content'>\r\n                <li>\r\n                    <a [routerLink]=\"['/home']\">Home</a>\r\n                </li>\r\n                <li class=\"divider\" tabindex=\"-1\"></li>\r\n                <li>\r\n                    <a [routerLink]=\"['/app-events']\">App Events</a>\r\n                </li>\r\n                <li class=\"divider\" tabindex=\"-1\"></li>\r\n                <li>\r\n                    <a [routerLink]=\"['/about-us']\">About Us</a>\r\n                </li>\r\n                <li class=\"divider\" tabindex=\"-1\"></li>\r\n                <li>\r\n                    <a [routerLink]=\"['/contact-us']\">Contact Us</a>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n\r\n        <div class=\"pw-footer__copyright\">\r\n            Copyright © 2018 PuWifi\r\n            <div style=\"text-align: center\">\r\n                <a href=\"http://www.array151.com\" target=\"_blank\">Array151</a>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -257,7 +257,7 @@ var AboutUsComponent = /** @class */ (function () {
 /***/ "../../../../../src/app/components/app-events/app-events.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"pw-screen-margin\">\r\n    <div class=\"pw-app__text-content\">\r\n        <span class=\"pw-app__title\">\r\n            Popular News and Event from PU!!!\r\n        </span>\r\n\r\n        <div class=\"pw-app-events\">\r\n            <div class=\"card\" *ngFor=\"let event of events\" (click)=\"showMore(cardContent)\">\r\n                <div class=\"card-image\">\r\n                    <img [src]=\"event.img_url\">\r\n                </div>\r\n                <div class=\"card-content\" #cardContent>\r\n                    <p>{{event.title}}</p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"pw-screen-margin\">\r\n    <div class=\"pw-app__text-content\">\r\n        <span class=\"pw-app__title\">\r\n            Popular News and Event from PU!!!\r\n        </span>\r\n\r\n        <div class=\"pw-app-events\">\r\n            <div class=\"card\" *ngFor=\"let event of events\" (click)=\"showMore(cardContent)\">\r\n                <div class=\"card-image\">\r\n                    <img [src]=\"event.img_url\">\r\n                    <span class=\"card-title\">{{event.title}}</span>\r\n                </div>\r\n                <div class=\"card-content card-content--hide\" #cardContent>\r\n                    <p>{{event.description}}</p>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -286,37 +286,80 @@ var AppEventsComponent = /** @class */ (function () {
         this.initData();
     }
     AppEventsComponent.prototype.initData = function () {
-        // this.eventService.getEvents().subscribe((appEvents: any) => {
-        //   this.events = appEvents.data;
-        this.events = [{
-                created_on: "2018-06-14T09:42:00.612115",
-                description: "#PUAdmission It's that time of the year again! A long list of queries, confusions, misconceptions, doubts and what not.Let it all shun away as we are here to show you the right way. To put you under an umbrella of the right guidance and support, PU Mirror is available round the clock to help you make it through the PU Admissions 2018-19.",
-                end_date: "2018-07-15T00:00:00+00:00",
-                id: 24,
-                img_url: "https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/33576010_922863327885944_5303460878782300160_n.jpg?_nc_cat=0&oh=564cea3be061561e4cae7f79ff0f02e3&oe=5BBB8F2D",
-                link: "https://www.facebook.com/pumirror1/photos/a.451444408361174.1073741829.440897942749154/922863324552611/?type=3",
-                start_date: "2018-06-14T00:00:00+00:00",
-                title: "PU Admissions 2018-2019"
-            }, {
-                created_on: "2018-06-14T09:42:00.612115",
-                description: "#PUAdmission It's that time of the year again! A long list of queries, confusions, misconceptions, doubts and what not.Let it all shun away as we are here to show you the right way. To put you under an umbrella of the right guidance and support, PU Mirror is available round the clock to help you make it through the PU Admissions 2018-19.",
-                end_date: "2018-07-15T00:00:00+00:00",
-                id: 24,
-                img_url: "https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/33576010_922863327885944_5303460878782300160_n.jpg?_nc_cat=0&oh=564cea3be061561e4cae7f79ff0f02e3&oe=5BBB8F2D",
-                link: "https://www.facebook.com/pumirror1/photos/a.451444408361174.1073741829.440897942749154/922863324552611/?type=3",
-                start_date: "2018-06-14T00:00:00+00:00",
-                title: "PU Admissions 2018-2019"
-            }, {
-                created_on: "2018-06-14T09:42:00.612115",
-                description: "#PUAdmission It's that time of the year again! A long list of queries, confusions, misconceptions, doubts and what not.Let it all shun away as we are here to show you the right way. To put you under an umbrella of the right guidance and support, PU Mirror is available round the clock to help you make it through the PU Admissions 2018-19.",
-                end_date: "2018-07-15T00:00:00+00:00",
-                id: 24,
-                img_url: "https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/33576010_922863327885944_5303460878782300160_n.jpg?_nc_cat=0&oh=564cea3be061561e4cae7f79ff0f02e3&oe=5BBB8F2D",
-                link: "https://www.facebook.com/pumirror1/photos/a.451444408361174.1073741829.440897942749154/922863324552611/?type=3",
-                start_date: "2018-06-14T00:00:00+00:00",
-                title: "PU Admissions 2018-2019"
-            }];
-        // });
+        var _this = this;
+        this.eventService.getEvents().subscribe(function (appEvents) {
+            _this.events = appEvents.data;
+            // this.events = [{
+            //   created_on: "2018-06-14T09:42:00.612115",
+            //   description
+            //     :
+            //     "#PUAdmission It's that time of the year again! A long list of queries, confusions, misconceptions, doubts and what not.Let it all shun away as we are here to show you the right way. To put you under an umbrella of the right guidance and support, PU Mirror is available round the clock to help you make it through the PU Admissions 2018-19.",
+            //   end_date
+            //     :
+            //     "2018-07-15T00:00:00+00:00",
+            //   id
+            //     :
+            //     24,
+            //   img_url
+            //     :
+            //     "https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/33576010_922863327885944_5303460878782300160_n.jpg?_nc_cat=0&oh=564cea3be061561e4cae7f79ff0f02e3&oe=5BBB8F2D",
+            //   link
+            //     :
+            //     "https://www.facebook.com/pumirror1/photos/a.451444408361174.1073741829.440897942749154/922863324552611/?type=3",
+            //   start_date
+            //     :
+            //     "2018-06-14T00:00:00+00:00",
+            //   title
+            //     :
+            //     "PU Admissions 2018-2019"
+            // }, {
+            //   created_on: "2018-06-14T09:42:00.612115",
+            //   description
+            //     :
+            //     "#PUAdmission It's that time of the year again! A long list of queries, confusions, misconceptions, doubts and what not.Let it all shun away as we are here to show you the right way. To put you under an umbrella of the right guidance and support, PU Mirror is available round the clock to help you make it through the PU Admissions 2018-19.",
+            //   end_date
+            //     :
+            //     "2018-07-15T00:00:00+00:00",
+            //   id
+            //     :
+            //     24,
+            //   img_url
+            //     :
+            //     "https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/33576010_922863327885944_5303460878782300160_n.jpg?_nc_cat=0&oh=564cea3be061561e4cae7f79ff0f02e3&oe=5BBB8F2D",
+            //   link
+            //     :
+            //     "https://www.facebook.com/pumirror1/photos/a.451444408361174.1073741829.440897942749154/922863324552611/?type=3",
+            //   start_date
+            //     :
+            //     "2018-06-14T00:00:00+00:00",
+            //   title
+            //     :
+            //     "PU Admissions 2018-2019"
+            // }, {
+            //   created_on: "2018-06-14T09:42:00.612115",
+            //   description
+            //     :
+            //     "#PUAdmission It's that time of the year again! A long list of queries, confusions, misconceptions, doubts and what not.Let it all shun away as we are here to show you the right way. To put you under an umbrella of the right guidance and support, PU Mirror is available round the clock to help you make it through the PU Admissions 2018-19.",
+            //   end_date
+            //     :
+            //     "2018-07-15T00:00:00+00:00",
+            //   id
+            //     :
+            //     24,
+            //   img_url
+            //     :
+            //     "https://scontent-bom1-1.xx.fbcdn.net/v/t1.0-9/33576010_922863327885944_5303460878782300160_n.jpg?_nc_cat=0&oh=564cea3be061561e4cae7f79ff0f02e3&oe=5BBB8F2D",
+            //   link
+            //     :
+            //     "https://www.facebook.com/pumirror1/photos/a.451444408361174.1073741829.440897942749154/922863324552611/?type=3",
+            //   start_date
+            //     :
+            //     "2018-06-14T00:00:00+00:00",
+            //   title
+            //     :
+            //     "PU Admissions 2018-2019"
+            // }]
+        });
     };
     AppEventsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
