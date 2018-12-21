@@ -43,15 +43,23 @@ module.exports = function (router) {
     router.post("/addnotification", (req, res) => {
         var title = req.body.title.replaceAll("'", "''");
         var description = req.body.description.replaceAll("'", "''");
-        var imgUrl = req.body.imgUrl || "";
         var link = req.body.link || "";
         var startDate = req.body.startDate;
         var endDate = req.body.endDate;
-        var tags = req.body.tags.replaceAll("'","\"");
+        var tags = req.body.tags.replaceAll("'", "\"");
 
         var token = req.body.token;
 
-        if(token !== TOKEN){
+        var photos = req.body.photos.replaceAll("'", "\"") || "";
+        var imgUrl = "";
+
+        if (photos !== "{}") {
+            photos = photos.substring(2, photos.length - 2);
+            var arrPhotos = photos.split(",");
+            imgUrl = arrPhotos[0];
+        }
+
+        if (token !== TOKEN) {
             return res.send({ "error": "Invalid token." });
         }
 
